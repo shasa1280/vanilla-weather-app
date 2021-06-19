@@ -12,41 +12,55 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <title>Weather App</title>
+
+    <title>Weather Watch</title>
   </head>
   <body>
-    <div class="container">
-      <div class="weather-app">
-        <h1>Toronto</h1>
-        <ul>
-          <li>Friday 05:00</li>
-          <li>Rain</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
-              alt="Rain"
-            />
-
-            12°C | °F
-          </div>
-          <div class="col-6">
+    <div class="webpage-wrapper">
+      <h1>Weather Watch</h1>
+      <div class="container">
+        <div class="weather-app">
+          <div class="todays-weather-overview">
+            <h2>Toronto</h2>
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 95%</li>
-              <li>Wind: 14km/h</li>
+              <li>Friday 05:00</li>
+              <li>Rain</li>
             </ul>
           </div>
-          <small>
-            <a
-              href="https://github.com/shasa1280/vanilla-weather-app"
-              target="_blank"
-              >Open-source</a
-            >
-            code by Shasa Boshoff
-          </small>
+
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
+                  alt="Rain"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>12</strong
+                  ><span class="units"
+                    >°C | <a href="#" class="farenheit-link">°F</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 0%</li>
+                <li>Humidity: 95%</li>
+                <li>Wind: 14km/h</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <small>
+          <a
+            href="https://github.com/shasa1280/vanilla-weather-app"
+            target="_blank"
+            >Open-source</a
+          >
+          code by Shasa Boshoff
+        </small>
       </div>
     </div>
     <script src="src/app.js"></script>
