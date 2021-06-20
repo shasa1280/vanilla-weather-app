@@ -4,6 +4,31 @@ let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=${
 
 axios.get(apiurl).then(displayTemp);
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}: ${minutes}`;
+}
+
 function displayTemp(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temp");
@@ -14,7 +39,7 @@ function displayTemp(response) {
   let feelsLikeElement = document.querySelector("#feels-like");
   let maxTempElement = document.querySelector("#max-temp");
 
-  letdateElement = document.querySelector("#date");
+  let dateElement = document.querySelector("#date");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -23,4 +48,6 @@ function displayTemp(response) {
   windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
+
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
