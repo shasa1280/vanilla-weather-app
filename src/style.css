@@ -8,6 +8,7 @@ h1 {
   font-weight: bolder;
   text-align: center;
   margin-top: 0;
+  margin-bottom: 25px;
 }
 h2 {
   color: #295a85;
@@ -67,6 +68,9 @@ li {
   text-decoration: none;
   font-size: 40;
 }
-.search-bar {
-  padding: 25 auto;
+.btn-primary {
+  background-color: #c7daea;
+  color: #004c98;
+  border: 1px black;
+  border-radius: 5px;
 }
