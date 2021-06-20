@@ -14,6 +14,8 @@ function displayTemp(response) {
   let feelsLikeElement = document.querySelector("#feels-like");
   let maxTempElement = document.querySelector("#max-temp");
 
+  letdateElement = document.querySelector("#date");
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   currentWeatherElement.innerHTML = response.data.weather[0].description;

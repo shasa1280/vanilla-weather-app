@@ -1,15 +1,20 @@
 body {
   font-family: "Crimson Pro", serif;
+  background: url("media/background.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+html {
+}
+
 h1 {
-  color: black;
+  color: rgb(255, 248, 248);
   font-weight: bolder;
   text-align: center;
   margin-top: 0;
 }
 
 h2 {
-  color: rgb(70, 18, 204);
+  color: #295a85;
   display: block;
   font-size: 30px;
   font-weight: bold;
@@ -35,9 +40,10 @@ li {
 }
 .weather-app {
   padding: 25px;
-  border: 2px solid #885df1;
+  border: 5px solid#5195D1;
   border-radius: 15px;
   background-color: #ffff;
+  opacity: 0.8;
 }
 .todays-weather-overview {
   margin-bottom: 15px;
