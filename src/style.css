@@ -67,3 +67,6 @@ li {
   text-decoration: none;
   font-size: 40;
 }
+.search-bar {
+  padding: 25 auto;
+}
