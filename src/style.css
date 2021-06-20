@@ -1,16 +1,17 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Crimson Pro", serif;
 }
 h1 {
   color: black;
   font-weight: bolder;
   text-align: center;
+  margin-top: 0;
 }
 
 h2 {
   color: rgb(70, 18, 204);
   display: block;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   line-height: 29px;
   margin-bottom: 0;
@@ -26,6 +27,7 @@ li {
   font-size: 16px;
   font-weight: 100;
   margin: 0;
+  text-transform: capitalize;
 }
 .webpage-wrapper {
   max-width: 600px;
@@ -35,6 +37,7 @@ li {
   padding: 25px;
   border: 2px solid #885df1;
   border-radius: 15px;
+  background-color: #ffff;
 }
 .todays-weather-overview {
   margin-bottom: 15px;

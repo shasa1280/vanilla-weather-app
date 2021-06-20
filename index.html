@@ -11,8 +11,13 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="src/style.css"
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro"
+    />
+    />
     <title>Weather Watch</title>
   </head>
   <body>
@@ -21,23 +26,22 @@
       <div class="container">
         <div class="weather-app">
           <div class="todays-weather-overview">
-            <h2>Toronto</h2>
+            <h2 id="city-name"></h2>
             <ul>
               <li>Friday 05:00</li>
-              <li>Rain</li>
+              <li id="current-weather"></li>
             </ul>
           </div>
-
           <div class="row">
             <div class="col-6">
-              <div class="clearfix weather-temperature">
+              <div class="d-flex weather-temperature">
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
                   alt="Rain"
                   class="float-left"
                 />
                 <div class="float-left">
-                  <strong>12</strong
+                  <strong id="temp"></strong
                   ><span class="units"
                     >°C | <a href="#" class="farenheit-link">°F</a></span
                   >
@@ -46,9 +50,10 @@
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity: 95%</li>
-                <li>Wind: 14km/h</li>
+                <li>Feels Like:<span id="feels-like"></span>°C</li>
+                <li>Todays High:<span id="max-temp"></span> °C</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind-speed"></span> km/h</li>
               </ul>
             </div>
           </div>
