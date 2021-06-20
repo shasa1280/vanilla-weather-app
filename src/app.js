@@ -48,6 +48,7 @@ function displayTemp(response) {
   );
   weatherIconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 function search(city) {
   let apikey = "4c099f4f901402f4288ecadef6fa9e70";
   let unit = "metric";
@@ -61,7 +62,16 @@ function handleSubmit(event) {
   search(cityInputElement.value);
   console.log(cityInputElement.value);
 }
+
 search("Toronto");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let farenheitLink = document.querySelector("farenheit-link");
+farenheitLink.addEventListener("click", displayFarenheitTemp);
+
+function displayFarenheitTemp(event) {
+  event.preventDefault();
+  alert("hello");
+}

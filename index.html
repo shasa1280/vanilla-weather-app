@@ -38,7 +38,7 @@
           <div class="col-4">
             <input
               type="submit"
-              value="Tell me my Weather"
+              value="Search your Weather"
               class="btn-primary w-100"
             />
           </div>
@@ -51,7 +51,7 @@
             <h2 id="city-name"></h2>
             <ul>
               <li id="current-weather"></li>
-              <li>Last search: <span id="date"></span></li>
+              <li><small>Last search: <span id="date"></small></span></li>
             </ul>
           </div>
           <div class="row">
@@ -61,7 +61,10 @@
                 <div class="float-left">
                   <strong id="temp"></strong
                   ><span class="units"
-                    >°C | <a href="#" class="farenheit-link">°F</a></span
+                    >°C |
+                    <a href="#" class="farenheit-link" id="farenheit-link"
+                      >°F</a
+                    ></span
                   >
                 </div>
               </div>
