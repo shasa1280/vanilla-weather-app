@@ -1,6 +1,7 @@
 let apikey = "4c099f4f901402f4288ecadef6fa9e70";
 let unit = "metric";
-let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=${apikey}&units=${unit}`;
+let city = "Toronto";
+let apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${unit}`;
 
 axios.get(apiurl).then(displayTemp);
 
@@ -24,10 +25,11 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day} ${hours}: ${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayTemp(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temp");
   let cityElement = document.querySelector("#city-name");
   let currentWeatherElement = document.querySelector("#current-weather");
@@ -35,8 +37,8 @@ function displayTemp(response) {
   let windSpeedElement = document.querySelector("#wind-speed");
   let feelsLikeElement = document.querySelector("#feels-like");
   let maxTempElement = document.querySelector("#max-temp");
-
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -45,6 +47,10 @@ function displayTemp(response) {
   windSpeedElement.innerHTML = Math.round(response.data.wind.speed);
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
-
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }

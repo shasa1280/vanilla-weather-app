@@ -1,11 +1,12 @@
 body {
-  font-family: "Crimson Pro", serif;
+  font-family: "Krona One", sans-serif;
   background: url("media/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 h1 {
-  color: rgb(255, 248, 248);
+  color: #9cc1dd;
+  text-outline: 1px #18124a solid;
   font-weight: bolder;
   text-align: center;
   margin-top: 0;
@@ -26,7 +27,7 @@ ul {
 
 li {
   list-style: none;
-  color: rgb(112, 109, 121);
+  color: rgb(85, 84, 88);
   font-size: 16px;
   font-weight: 100;
   margin: 0;
@@ -35,14 +36,13 @@ li {
   text-transform: capitalize;
 }
 .webpage-wrapper {
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
 }
 .weather-app {
   padding: 25px;
-  border: 5px solid#5195D1;
   border-radius: 15px;
-  background-color: #ffff;
+  background-color: #a9d1ff;
   opacity: 0.8;
 }
 .todays-weather-overview {
