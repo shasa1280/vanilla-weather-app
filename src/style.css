@@ -3,15 +3,12 @@ body {
   background: url("media/background.jpg") no-repeat center center fixed;
   background-size: cover;
 }
-
 h1 {
   color: #9cc1dd;
-  text-outline: 1px #18124a solid;
   font-weight: bolder;
   text-align: center;
   margin-top: 0;
 }
-
 h2 {
   color: #295a85;
   display: block;

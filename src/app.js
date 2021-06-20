@@ -38,7 +38,7 @@ function displayTemp(response) {
   let feelsLikeElement = document.querySelector("#feels-like");
   let maxTempElement = document.querySelector("#max-temp");
   let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
+  let weatherIconElement = document.querySelector("#weather-icon");
 
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
@@ -48,9 +48,9 @@ function displayTemp(response) {
   feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
   maxTempElement.innerHTML = Math.round(response.data.main.temp_max);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
+  weatherIconElement.setAttribute(
     "src",
     ` http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  weatherIconElement.setAttribute("alt", response.data.weather[0].description);
 }
