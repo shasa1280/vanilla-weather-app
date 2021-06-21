@@ -64,7 +64,11 @@ li {
   position: relative;
   top: -45px;
 }
-.weather-temperature .farenheit-link {
+.weather-temperature .fahrenheit-link {
+  text-decoration: none;
+  font-size: 40;
+}
+.weather-temperature .celcius-link {
   text-decoration: none;
   font-size: 40;
 }
