@@ -34,9 +34,9 @@ function displayTemp(response) {
   let dateElement = document.querySelector("#date");
   let weatherIconElement = document.querySelector("#weather-icon");
 
-  celciusTemp = response.data.main.temp;
+  celsiusTemp = response.data.main.temp;
 
-  temperatureElement.innerHTML = Math.round(celciusTemp);
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
   cityElement.innerHTML = response.data.name;
   currentWeatherElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
@@ -64,19 +64,19 @@ function handleSubmit(event) {
   search(cityInputElement.value);
   console.log(cityInputElement.value);
 }
-function displayCelciusTemp(event) {
+function displaycelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  temperatureElement.innerHTML = celciusTemp;
+  temperatureElement.innerHTML = celsiusTemp;
 }
 function displayfahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  let fahrenheitTemp = (celciusTemp * 9) / 5 + 32;
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
-let celciusTemp = null;
+let celsiusTemp = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
@@ -84,7 +84,7 @@ form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
 
-let celciusLink = document.querySelector("#celcius-link");
-fahrenheitLink.addEventListener("click", displayCelciusTemp);
+let celsiusLink = document.querySelector("#celsius-link");
+fahrenheitLink.addEventListener("click", displaycelsiusTemp);
 
 search("Toronto");
