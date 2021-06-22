@@ -72,7 +72,11 @@ li {
   text-decoration: none;
   font-size: 40;
 }
-
+.weather-temperature .active {
+  color: #2a2e40;
+  text-decoration: none;
+  cursor: default;
+}
 .btn-primary {
   background-color: #c7daea;
   color: #004c98;

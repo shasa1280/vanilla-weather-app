@@ -67,11 +67,16 @@ function handleSubmit(event) {
 function displayCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
 function displayfahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
@@ -84,7 +89,7 @@ form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
 
-let celsiusLink = document.querySelector(".celsius-link");
+let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Toronto");
