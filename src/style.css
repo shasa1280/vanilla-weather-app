@@ -83,3 +83,20 @@ li {
   border: 1px black;
   border-radius: 5px;
 }
+.future-forecast {
+  padding: 25px;
+  border-radius: 15px;
+  background-color: #a9d1ff;
+  opacity: 0.8;
+}
+.forecast-date {
+  font-size: 16px;
+  color: #262c3e;
+  opacity: 0.6;
+}
+.forecast-temp {
+  font-size: 13px;
+}
+.forecast-temp-mins {
+  opacity: 0.6;
+}
