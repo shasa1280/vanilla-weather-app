@@ -22,18 +22,23 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = "";
-  forecastHTML = `
-  <div class="row">
+  let days = ["Friday", "Saturday", "Sunday"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
     <div class="col-2">
   <div class="forecast-date">Tues</div>
   <img
     src="http://openweathermap.org/img/wn/04d@2x.png"
     alt=""
-     width="50px"
+    width="50px"
     />
     <div class="forecast-temp">
       <span class="forecast-temp-max">18°</span>
@@ -41,7 +46,10 @@ function displayForecast() {
      </div>
     </div>
   `;
-  forecastHTML.innerHTML = forecastHTML;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement = forecastHTML;
 }
 
 function displayTemp(response) {
@@ -113,4 +121,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Toronto");
+
 displayForecast();
