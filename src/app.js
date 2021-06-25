@@ -68,12 +68,10 @@ function displayForecast(response) {
 }
 
 function getFutureForecast(coordinates) {
-  console.log(coordinates);
   let apikey = "4c099f4f901402f4288ecadef6fa9e70";
   let unit = "metric";
   let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apikey}&units=${unit}`;
   axios.get(apiURL).then(displayForecast);
-  console.log(apiURL);
 }
 
 function displayTemp(response) {
@@ -117,7 +115,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-  console.log(cityInputElement.value);
 }
 function displayCelsiusTemp(event) {
   event.preventDefault();
