@@ -123,7 +123,7 @@ function displayCelsiusTemp(event) {
   celsiusLink.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
-function displayfahrenheitTemp(event) {
+function displayFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
   celsiusLink.classList.remove("active");
@@ -138,7 +138,7 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayfahrenheitTemp);
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
